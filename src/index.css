@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0px 32px;
   background-color: #012d5e;
   font-family: 'Prompt', sans-serif;
   -webkit-font-smoothing: antialiased;

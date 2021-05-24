@@ -14,7 +14,6 @@ const Header: FC<HeaderProps> = (props) => {
 }
 
 const Text = styled.h1`
-    margin-left: 20px;
     color: ${props => props.theme.yellow};
 `;
 
