@@ -17,18 +17,18 @@ const InfoHeader = styled.h1`
     padding: 16px 0 0 0;
 `;
 
-const TextH1 = styled.h3`
+const TextH3 = styled.h3`
     font-weight: 300;
     font-size: 23px;
     margin: 12px 0 0 0;
 `;
 
-const TextH2 = styled.h4`
+const TextH4 = styled.h4`
     font-weight: 900;
     font-size: 12px;
     margin: 0 0 12px 0;
 `;
 
 export default {
-    Header, FormHeader, InfoHeader, TextH1, TextH2
+    Header, FormHeader, InfoHeader, TextH3, TextH4
 }
