@@ -35,7 +35,7 @@ const Container = styled.div<ContainerProps>`
     margin: ${(props) => props.margin};
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex-grow: 1;
 `
 
 const Label = styled.label`
@@ -49,6 +49,9 @@ const Input = styled.input`
     box-sizing:border-box;
     padding: 8px;
     font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
 `
 
 export default TextField;

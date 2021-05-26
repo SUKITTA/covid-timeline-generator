@@ -29,15 +29,18 @@ const TextArea: FC<TextAreaProps> = (props) => {
 const Input = styled.textarea`
     resize: vertical;
     font-size: 16px;
+    font-family: 'Prompt', sans-serif;
     padding: 8px;
     box-sizing: border-box;
+    border: none;
+    outline: none;
 `;
 
 const Container = styled.div<ContainerProps>`
     margin: ${(props) => props.margin};
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex-grow: 1;
 `;
 
 const Label = styled.label`

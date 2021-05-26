@@ -15,11 +15,11 @@ interface ContainerProps {
 
 const GenderSelect: FC<GenderSelectProps> = (props) => {
     return (
-        <Container>
+        <Container margin={props.margin}>
             <Label>
                 {props.label}
             </Label>
-                <Select name="Gender" id="Gender">
+                <Select value={props.value} onChange={(e) => props.onChange(e.target.value)}>
                     <option value="male">ชาย</option>
                     <option value="female">หญิง</option>
                 </Select>
@@ -35,12 +35,15 @@ const Select = styled.select`
     box-sizing:border-box;
     padding: 8px;
     font-size: 16px;
+    border: none;
+    outline: none;
 `;
 
 const Container = styled.div<ContainerProps>`
     margin: ${(props) => props.margin};
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     width: 100%;
 `;
 
