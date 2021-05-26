@@ -1,9 +1,10 @@
-import { Content, FormContainer, Header, InfoContainer } from "./components"
+import { Content, FormContainer, InfoContainer, Typography } from "./components"
+
 
 function App() {
   return (
     <>
-      <Header text="COVID Timeline Genelator"/>
+      <Typography.Header>COVID Timeline Genelator</Typography.Header>
       <Content>
         <FormContainer/>
         <InfoContainer/>
