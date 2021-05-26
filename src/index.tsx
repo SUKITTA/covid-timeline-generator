@@ -9,9 +9,9 @@ const theme = {
   background: "#012d5e",
   yellow: "#ffc107",
   white: "#bbc7d4",
-  ligthBlueLeft: "#34577e",
-  lightBlue: "#27a74",
-  blueText: "#234973"
+  blueInfoContainer: "#34577e",
+  greenText: "#27a774",
+  blueFormContainer: "#234973"
 }
 
 ReactDOM.render(
