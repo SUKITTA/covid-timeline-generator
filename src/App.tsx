@@ -1,5 +1,5 @@
 import { compareAsc } from "date-fns"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Content, FormContainer, InfoContainer, Typography } from "./components"
 import { Timeline } from './components/InfoContainer'
 
@@ -11,6 +11,29 @@ function App() {
   const [dateTime, setDateTime] = useState("")
   const [detail, setDetail] = useState("")
   const [timeline, setTimeline] = useState<Timeline[]>([])
+
+  useEffect(() => {
+    setGender(localStorage.getItem("gender") || "")
+    setAge(localStorage.getItem("age") || "")
+    setOccupation(localStorage.getItem("occupation") || "")
+    setDateTime(localStorage.getItem("dateTime") || "")
+    setDetail(localStorage.getItem("detail") || "")
+    const timelineLocalStorage = localStorage.getItem("timeline")
+    if (timelineLocalStorage) {
+      setTimeline(JSON.parse(timelineLocalStorage))
+    } else {
+      setTimeline([])
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("gender", gender)
+    localStorage.setItem("age", age)
+    localStorage.setItem("occupation", occupation)
+    localStorage.setItem("dateTime", dateTime)
+    localStorage.setItem("detail", detail)
+    localStorage.setItem("timeline", JSON.stringify(timeline))
+  }, [gender, age, occupation, dateTime, detail, timeline])
 
   const handleClickAdddButton = () => {
     if (dateTime && detail) {
