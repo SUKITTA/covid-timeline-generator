@@ -1,5 +1,5 @@
-import { FC, InputHTMLAttributes } from 'react';
-import styled from 'styled-components'
+import { FC } from 'react';
+import styled from 'styled-components';
 
 interface TextFieldProps {
     margin?: string;
@@ -21,13 +21,13 @@ const TextField: FC<TextFieldProps> = (props) => {
             <Label>
                 {props.label}
             </Label>
-            <Input 
-                value={props.value}    
+            <Input
+                value={props.value}
                 type={props.type}
                 onChange={(e) => props.onChange(e.target.value)}
             />
         </Container>
-        
+
     );
 }
 
@@ -39,7 +39,7 @@ const Container = styled.div<ContainerProps>`
 `
 
 const Label = styled.label`
-    color: ${(props) => props.theme.white };
+    color: ${(props) => props.theme.white};
 `
 
 const Input = styled.input`

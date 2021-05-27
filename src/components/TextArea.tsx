@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 interface TextAreaProps {
     margin?: string;
@@ -15,13 +15,13 @@ interface ContainerProps {
 
 const TextArea: FC<TextAreaProps> = (props) => {
     return (
-        <Container 
+        <Container
             margin={props.margin}
         >
             <Label>
                 {props.label}
             </Label>
-            <Input value={props.value} onChange={(e) => props.onChange(e.target.value)} rows={5}/>
+            <Input value={props.value} onChange={(e) => props.onChange(e.target.value)} rows={5} />
         </Container>
     )
 }
@@ -44,7 +44,7 @@ const Container = styled.div<ContainerProps>`
 `;
 
 const Label = styled.label`
-    color: ${(props) => props.theme.white };
+    color: ${(props) => props.theme.white};
 `;
 
 

@@ -1,5 +1,5 @@
-import React, { FC, ReactElement } from 'react'
-import styled from 'styled-components'
+import React, { FC, ReactElement } from 'react';
+import styled from 'styled-components';
 
 interface ContentProps {
     children: ReactElement[]

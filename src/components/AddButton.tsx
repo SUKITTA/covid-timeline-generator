@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 interface AddButtonProps {
     margin?: string;
@@ -29,6 +29,7 @@ const Button = styled.button<ButtonProps>`
     box-sizing:border-box;
     padding: 8px;
     font-size: 16px;
+    border: none;
 `;
 
 export default AddButton;
