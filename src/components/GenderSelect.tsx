@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 interface GenderSelectProps {
     margin?: string;
@@ -19,11 +19,12 @@ const GenderSelect: FC<GenderSelectProps> = (props) => {
             <Label>
                 {props.label}
             </Label>
-                <Select value={props.value} onChange={(e) => props.onChange(e.target.value)}>
-                    <option value="male">ชาย</option>
-                    <option value="female">หญิง</option>
-                </Select>
-           
+            <Select value={props.value} onChange={(e) => props.onChange(e.target.value)}>
+                <option value=""></option>
+                <option value="ชาย">ชาย</option>
+                <option value="หญิง">หญิง</option>
+            </Select>
+
         </Container>
     )
 }
@@ -48,7 +49,7 @@ const Container = styled.div<ContainerProps>`
 `;
 
 const Label = styled.label`
-    color: ${(props) => props.theme.white };
+    color: ${(props) => props.theme.white};
 `;
 
 export default GenderSelect;
