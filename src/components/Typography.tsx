@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Header = styled.h1`
     color: ${props => props.theme.yellow};
@@ -12,10 +12,8 @@ const FormHeader = styled.h3`
 
 const InfoHeader = styled.h1`
     color: ${(props) => props.theme.yellow};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 0 0 0;
+    text-align: center;
+    margin: 48px 0 8px 0;
 `;
 
 const TextH3 = styled.h3`
