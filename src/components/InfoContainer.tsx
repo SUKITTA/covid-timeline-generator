@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Timeline, Typography } from '../components'
 import { TimelineItemProps } from './Timeline'
 
-export interface Timeline {
+export interface TimelineProp {
     dateTime: string
     detail: string;
 }
@@ -15,7 +15,7 @@ interface InfoContainerProps {
     occupation: string;
     dateTime: string;
     detail: string;
-    timeline: Timeline[];
+    timeline: TimelineProp[];
     onClickCloseButton: (date: string) => void;
 }
 

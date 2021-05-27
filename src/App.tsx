@@ -1,7 +1,7 @@
 import { compareAsc } from "date-fns"
 import { useEffect, useState } from "react"
 import { Content, FormContainer, InfoContainer, Typography } from "./components"
-import { Timeline } from './components/InfoContainer'
+import { TimelineProp as Timeline } from './components/InfoContainer'
 
 
 function App() {
