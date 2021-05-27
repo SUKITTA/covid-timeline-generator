@@ -1,14 +1,22 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { AddButton, GenderSelect, TextArea, TextField, Typography } from "../components"
 
-const FormContainer: FC = () => {
+interface FormContainerProps {
+    gender: string;
+    age: string;
+    occupation: string;
+    dateTime: string;
+    detail: string;
+    onGenderChange: (val: string) => void
+    onAgeChange: (val: string) => void
+    onOccupationChange: (val: string) => void
+    onDateTimeChange: (val: string) => void
+    onDetailChange: (val: string) => void
+    onClickAddButton: () => void
+}
 
-    const [genderVal, setGenderVal] = useState("")
-    const [ageVal, setAgeVal] = useState("")
-    const [occupation, setOccupation] = useState("")
-    const [dateTime, setDateTime] = useState("")
-    const [detail, setDetail] = useState("")
+const FormContainer: FC<FormContainerProps> = (props) => {
 
     return (
         <Container>
@@ -22,51 +30,52 @@ const FormContainer: FC = () => {
                     }}
                 >
                     <GenderSelect
-                        label="เพศ" 
-                        value={genderVal} 
-                        onChange={setGenderVal} 
-                        margin="0 16px" 
+                        label="เพศ"
+                        value={props.gender}
+                        onChange={props.onGenderChange}
+                        margin="0 16px"
                     />
-                    <TextField 
-                        label="อายุ" 
-                        value={ageVal} 
-                        onChange={setAgeVal} 
-                        margin="0 16px" 
+                    <TextField
+                        label="อายุ"
+                        type="number"
+                        value={props.age}
+                        onChange={props.onAgeChange}
+                        margin="0 16px"
                     />
                 </div>
-                <TextField 
-                    label="อาชีพ"  
-                    value={occupation} 
-                    onChange={setOccupation} 
-                    margin="16px" 
+                <TextField
+                    label="อาชีพ"
+                    value={props.occupation}
+                    onChange={props.onOccupationChange}
+                    margin="16px"
                 />
             </FormPaper>
-                
+
             <FormPaper>
                 <Typography.FormHeader>
-                    ข้อมูลผู้ป่วย
+                    ข้อมูลไทม์ไลน์
                 </Typography.FormHeader>
-                <TextField 
-                    label="วันเวลา" 
-                    type="datetime-local" 
-                    value={dateTime} 
-                    onChange={setDateTime} 
-                    margin="0 16px" 
+                <TextField
+                    label="วันเวลา"
+                    type="datetime-local"
+                    value={props.dateTime}
+                    onChange={props.onDateTimeChange}
+                    margin="0 16px"
                 />
-                <TextArea 
-                    label="รายละเอียด" 
-                    value={detail} 
-                    onChange={setDetail}
-                    margin="16px 16px" 
+                <TextArea
+                    label="รายละเอียด"
+                    value={props.detail}
+                    onChange={props.onDetailChange}
+                    margin="16px 16px"
                 />
                 <AddButton
-                    margin="0 0 16px 16px" 
-                    onClick={() => {console.log("click")}}
-                >   
+                    margin="0 0 16px 16px"
+                    onClick={props.onClickAddButton}
+                >
                     + เพิ่มข้อมูล
                 </AddButton>
             </FormPaper>
-           
+
         </Container>
     )
 }
