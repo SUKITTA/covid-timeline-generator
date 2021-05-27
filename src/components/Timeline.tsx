@@ -117,4 +117,6 @@ const CloseButton = styled.button`
     display: flex;
 `;
 
-export default { Container, Item };
+const Timeline = { Container, Item }
+
+export default Timeline;

@@ -30,6 +30,8 @@ const TextH4 = styled.h4`
     word-break: break-word;
 `;
 
-export default {
+const Typography = {
     Header, FormHeader, InfoHeader, TextH3, TextH4
 }
+
+export default Typography
