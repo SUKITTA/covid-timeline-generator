@@ -45,7 +45,10 @@ const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const Label = styled.label`

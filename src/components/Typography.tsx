@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Header = styled.h1`
     color: ${props => props.theme.yellow};
     font-weight: 100;
+    margin-top: 0px;
 `;
 
 const FormHeader = styled.h3`
@@ -26,6 +27,7 @@ const TextH4 = styled.h4`
     font-weight: 900;
     font-size: 12px;
     margin: 0 0 12px 0;
+    word-break: break-word;
 `;
 
 export default {

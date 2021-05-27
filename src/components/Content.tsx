@@ -15,8 +15,12 @@ const Content: FC<ContentProps> = (props) => {
 
 const Container = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+
+    @media only screen and (min-width: 768px){
+        flex-direction: row;
+    }
 `;
 
 export default Content

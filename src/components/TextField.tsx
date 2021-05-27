@@ -52,6 +52,11 @@ const Input = styled.input`
     border-radius: 4px;
     border: none;
     outline: none;
+    width: 100%;
+
+    @media only screen and (min-width: 768px){
+        width: auto;
+    }
 `
 
 export default TextField;

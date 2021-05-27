@@ -94,8 +94,12 @@ const PatientInfoContent = styled.div`
     align-items: center;
     background-color: ${(props) => props.theme.yellow};
     border-radius: 50px;
-    margin: 0;
-    width: 300px;
+    margin: 0 16px;
+    padding: 0 16px;
+
+    @media only screen and (min-width: 768px){
+        width: 300px;
+    }
 `;
 
 

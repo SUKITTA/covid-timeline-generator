@@ -24,11 +24,7 @@ const FormContainer: FC<FormContainerProps> = (props) => {
                 <Typography.FormHeader>
                     ข้อมูลผู้ป่วย
                 </Typography.FormHeader>
-                <div
-                    style={{
-                        display: 'flex',
-                    }}
-                >
+                <FormRow>
                     <GenderSelect
                         label="เพศ"
                         value={props.gender}
@@ -42,7 +38,7 @@ const FormContainer: FC<FormContainerProps> = (props) => {
                         onChange={props.onAgeChange}
                         margin="0 16px"
                     />
-                </div>
+                </FormRow>
                 <TextField
                     label="อาชีพ"
                     value={props.occupation}
@@ -69,7 +65,7 @@ const FormContainer: FC<FormContainerProps> = (props) => {
                     margin="16px 16px"
                 />
                 <AddButton
-                    margin="0 0 16px 16px"
+                    margin="0 16px 16px 16px"
                     onClick={props.onClickAddButton}
                 >
                     + เพิ่มข้อมูล
@@ -80,16 +76,34 @@ const FormContainer: FC<FormContainerProps> = (props) => {
     )
 }
 
+const FormRow = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px){
+        flex-direction: row;
+    }
+`;
+
 const FormPaper = styled.div`
     background-color: ${(props) => props.theme.blueFormContainer};
     margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px){
+        display: unset;
+    }
 `;
 
 const Container = styled.div`
-    margin-right: 32px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    @media only screen and (min-width: 768px){
+        margin-right: 32px;
+    }
 `;
 
 export default FormContainer
